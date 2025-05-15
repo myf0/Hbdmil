@@ -1,0 +1,171 @@
+body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(180deg, #D0E4F7 0%, #96BDE7 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+        .container {
+            background-color: transparent;
+            text-align: center;
+            color: #ffffff;
+            width: 90%;
+            max-width: 350px;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 20px 0;
+            display: none;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+        #form-page {
+            display: block;
+        }
+        h1 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+        p {
+            font-size: 14px;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+        input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: none;
+            font-size: 14px;
+            background-color: #ffffff;
+            color: #333;
+        }
+        button {
+            background-color: #ffffff;
+            color: #007bff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .selanjutnya1 {
+            background-color: #007bff;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+        .selanjutnya2 {
+            background-color: #28a745;
+            color: #ffffff;
+        }
+        button:hover {
+            opacity: 0.9;
+        }
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-bottom: 20px;
+            color: #ffffff;
+            font-size: 12px;
+            text-align: left;
+        }
+        .card-slider {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            padding: 20px 0;
+            scroll-snap-type: x mandatory;
+        }
+        .card {
+            flex: 0 0 80%;
+            scroll-snap-align: center;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            transition: transform 0.4s, background-color 0.3s;
+            cursor: pointer;
+        }
+        .card:hover {
+            transform: rotate(3deg) scale(1.05);
+            background-color: #f0f8ff;
+        }
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.4s;
+        }
+        .card:hover img {
+            transform: scale(1.08) rotate(-2deg);
+        }
+            
+        .content {
+            background-color: #ffffff;
+            color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left;
+            margin-top: 20px;
+        }
+        .logo {
+            position: relative;
+            top: -30;
+            width: 250px;
+            margin-bottom: 20px;
+            right: 15%;
+        }
+        .barcode {
+            width: 80%;
+            margin: 20px auto;
+            display: block;
+        }
+        h2 {
+            font-size: 15px;
+            font-weight: 600;
+            text-align: left;
+            color: #ffffff;
+        }
+        .name-label {
+            font-size: 14px;
+            margin-bottom: 10px;
+            color: #ffffff;
+            text-align: left;
+        }
+        .h1{
+            font-size: 20px;
+            color: #ffffff;
+            font-weight: 700;
+            margin-top: -60px;
+        }
+        .selamat{
+            font-size: 14px;
+            margin-bottom: 10px;
+            color: #ffffff;
+            text-align: left;
+            font-weight: 600;
+        }
+        .container1 {
+    background-color: transparent;
+    text-align: center;
+    color: #ffffff;
+    width: 90%;
+    max-width: 350px;
+    padding: 100px 30px; /* Tambahkan padding atas lebih besar */
+    border-radius: 10px;
+    margin: 40px 0; /* Tambahkan margin atas-bawah */
+    display: none;
+    overflow-y: auto;
+}
+.warna{
+    color: black;
+}
