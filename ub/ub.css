@@ -1,0 +1,145 @@
+    /* ======= Global ======= */
+    :root {
+      --honey: #fde3a7;
+      --meadow: #1bbc9b;
+      --poppy:  #c0392b;
+      --sherpa: #013243;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+body {
+  background-image: url('bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+    body {
+      font-family: "Indie Flower", cursive;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    ::selection {
+      background: transparent;   /* tak perlu highlight */
+    }
+
+    /* ======= Card ======= */
+    .card {
+      position: relative;
+      width: 90vw;
+      max-width: 340px;
+      aspect-ratio: 3/4;           /* selalu proporsional */
+      background: #e0e1dc;
+      color: var(--sherpa);
+      transform-style: preserve-3d;
+      transform: perspective(2000px);
+      transition: 1s;
+      box-shadow:
+        inset 300px 0 50px rgba(0, 0, 0, 0.5),
+        20px 0 60px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Hover (disabling di mobile tidak masalah) */
+    .card:hover {
+      transform: perspective(2000px) rotate(15deg) scale(1.05);
+      box-shadow:
+        inset 20px 0 50px rgba(0, 0, 0, 0.5),
+        0 10px 100px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Tebing atas & samping */
+    .card::before,
+    .card::after {
+      content: "";
+      position: absolute;
+      background: #bac1ba;
+    }
+    .card::before {               /* sisi atas */
+      top: -5px;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      transform-origin: bottom;
+      transform: skewX(-45deg);
+    }
+    .card::after {                /* sisi kanan */
+      top: 0;
+      right: -5px;
+      width: 5px;
+      height: 100%;
+      background: #92a29c;
+      transform-origin: left;
+      transform: skewY(-45deg);
+    }
+
+    /* ======= Sampul ======= */
+    .imgBox {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform-origin: left;
+      transition: 0.7s;
+    }
+    .imgBox img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .bark {                       /* “bagian dalam” sampul */
+      position: absolute;
+      inset: 0;
+      background: #e0e1dc;
+      opacity: 0;
+      transition: 0.7s;
+    }
+
+    .card:hover .imgBox {
+      transform: rotateY(-135deg);
+    }
+    .card:hover .bark {
+      opacity: 1;
+      box-shadow: 300px 200px 100px rgba(0, 0, 0, 0.4) inset;
+    }
+
+    /* ======= Isi Kartu ======= */
+    .details {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 16px 24px 16px 36px; /* geser ke kanan supaya teks tak “keluar buku” */
+      margin-top: 60px;
+      z-index: -1;                /* tetap di bawah sampul */
+    }
+
+    .details h4 {
+      font-family: "Amatic SC", cursive;
+      font-size: clamp(18px, 5.5vw, 24px);
+      text-align: center;
+      margin: 10px 0;
+    }
+
+    .details p {
+      font-size: clamp(12px, 3.8vw, 14px);
+      line-height: 1.4;
+      margin: 6px 0;
+      transform: rotate(-2deg);
+      padding-left: 10px;
+    }
+
+    .color1 { color: var(--meadow); }
+    .color2 { color: var(--poppy); }
+    .text-right { text-align: right; }
+
+    /* ======= Desktop font tweak ======= */
+    @media (min-width: 768px) {
+      .details p  { font-size: 14px; }
+      .details h4 { font-size: 24px; }
+    }
